@@ -68,8 +68,38 @@ nav {
     border: 1px solid var(--border-grey);
     border-radius: 3px;
     outline: none;
-    color: var(--border-grey);
     background-color: var(--background-grey);
+}
+
+.search__result--container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+    padding: 0.5em;
+    width: 10em;
+    height: 20em;
+    border: 1px solid var(--border-grey);
+    background-color: var(--white);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.search__result--item {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.search__result--img {
+    margin-right: 0.5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 20px;
+}
+
+.search__result--text > p {
+    margin: 0;
 }
 
 input::placeholder {color: var(--border-grey)}

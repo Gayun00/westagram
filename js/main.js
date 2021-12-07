@@ -1,13 +1,18 @@
+
+const $search = document.querySelector('.search');
 const $commentInput = document.querySelector('.comment__input--text');
 const $commentButton = document.querySelector('.comment__input--button');
 const $commentContainer = document.querySelector('.comments');
-const $comments = document.querySelector('comment');
+const $comments = document.querySelector('.comment');
 const $feedButtons = document.querySelector('.feed__button');
 const $deleteButton = document.querySelector('.comment__delete-button');
 
 $commentButton.addEventListener('click', addComment);
 $commentContainer.addEventListener('click', deleteComment);
 $feedButtons.addEventListener('click', handleLike);
+$search.addEventListener('keyup', searchId);
+
+const idArr = [["images/profile-img2.jpg", 'wecode_bootcamp', 'wecode | 위코드'], ["images/profile-img.jpg", 'i_love_coding', '아코딩'], [null, 'sunglass', null], [null, 'sweat_shirt', null], [null, 'newziland4043', null], [null, 'huggy_woggy__33', null]];
 
 function addComment(e) {
     e.preventDefault();
@@ -30,9 +35,9 @@ function addComment(e) {
 function deleteComment(e) {
     const target = e.target;
     if(target.className !== 'fas fa-times') return;
-    console.log($comments)
+    const commentItem = target.parentNode.parentNode;
+    $commentContainer.removeChild(commentItem);
 }
-console.log($comments)
 
 function handleLike(e) {
     const target = e.target;
@@ -45,3 +50,28 @@ function handleLike(e) {
         target.classList.toggle('liked');
     }
 }
+
+const $searchResultContainer = document.querySelector('.search__result--container');
+
+function searchId(e) {
+    const target = e.target;
+    const filteredId = idArr.filter((id) => {
+        return id[1].includes(target.value);
+    })
+    const defaultImgUrl = 'images/default_profile-img.png';
+    const html = filteredId.map((id) => {
+        return `
+            <ul class="search__result--item">
+                <img src="${id[0] ?? defaultImgUrl}" alt="" class="search__result--img">
+                <span class="search__result--text">
+                    <p class="search__result--title">${id[1]}</p>
+                    <p class="search__result--subtitle">${id[2]}</p>
+                </span>
+            </ul>
+
+        `
+    }).join('');
+    $searchResultContainer.innerHTML = html;
+}
+
+
