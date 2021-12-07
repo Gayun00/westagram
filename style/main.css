@@ -108,6 +108,30 @@ input::placeholder {color: var(--border-grey)}
     cursor: pointer;
 }
 
+.my {
+    position: absolute;
+    top: 5em;
+    width: 15em;
+    padding: 10px;
+    list-style: none;
+    font-size: 12px;
+    background-color: var(--white);
+}
+
+.my > li {
+    display: flex;
+    align-items: center;
+}
+
+.my > li > p {
+    margin-left: 8px;
+}
+
+.my__logout {
+    padding-top: 1em;
+    border-top: 1px solid var(--border-grey);
+}
+
 main {
     display: flex;
     margin: 4em 0 0 4em;

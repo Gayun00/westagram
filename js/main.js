@@ -6,11 +6,13 @@ const $commentContainer = document.querySelector('.comments');
 const $comments = document.querySelector('.comment');
 const $feedButtons = document.querySelector('.feed__button');
 const $deleteButton = document.querySelector('.comment__delete-button');
+const $myButton = document.querySelector('.my');
 
 $commentButton.addEventListener('click', addComment);
 $commentContainer.addEventListener('click', deleteComment);
 $feedButtons.addEventListener('click', handleLike);
 $search.addEventListener('keyup', searchId);
+document.addEventListener('click', handleMyMenu);
 
 const idArr = [["images/profile-img2.jpg", 'wecode_bootcamp', 'wecode | 위코드'], ["images/profile-img.jpg", 'i_love_coding', '아코딩'], [null, 'sunglass', null], [null, 'sweat_shirt', null], [null, 'newziland4043', null], [null, 'huggy_woggy__33', null]];
 
@@ -80,3 +82,11 @@ function searchId(e) {
 }
 
 
+function handleMyMenu(e) {
+    const target = e.target;
+    if(target.id === 'my__img') {
+        $myButton.classList.toggle('hide');
+    } else {
+        $myButton.classList.add('hide');
+    }
+}
