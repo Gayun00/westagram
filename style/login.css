@@ -40,6 +40,15 @@ button {
     font-weight: 800;
 }
 
+.notice {
+    font-size: 0.5px;
+    color: rgb(167, 68, 68);
+}
+
 .active {
     background-color: rgb(90, 138, 228);
+}
+
+.hide {
+    visibility: hidden;
 }
