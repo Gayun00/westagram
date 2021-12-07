@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/common.css">
+    <script src="https://kit.fontawesome.com/9b1960ff86.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <span class="logo-wrap">
+            <span class="logo--icon">
+                <i class="fab fa-instagram"></i>
+            </span>
+            <span class="logo--text">Westagram</span>
+        </span>
+        <span class="search">
+            <input type="text" name="search" id="search" placeholder="              🔎검색">
+        </span>
+        <span class="nav__buttons">
+            <button>
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="" class="explore__img">
+            </button>
+            <button>
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="" class="like__img">
+            </button>
+            <button>
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="" class="my__img">
+            </button>
+        </span>
+    </nav>
+    <main>
+        <div class="feeds">
+            <article class="feed">
+                <div class="feed__header">
+                    <span class="feed__header--user">
+                        <img src="images/profile-img.jpg" alt="">
+                        <span class="feed__header--id">canon_mj</span>
+                    </span>
+                    <button class="feed_header--button">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                </div>
+                <div class="feed__img-container">
+                    <img src="images/profile-img.jpg" alt="" class="feed-img">
+                </div>
+                <div class="feed__buttons">
+                    <span class="feed__buttons1">
+                        <button class="feed__button">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="feed__button">
+                            <i class="far fa-comment"></i>
+                        </button>
+                        <button class="feed__button">
+                            <i class="far fa-share-square"></i>
+                        </button>
+                    </span>
+                    <span class="feed__buttons2">
+                        <button class="feed__button">
+                            <i class="far fa-bookmark"></i>
+                        </button>
+                    </span>
+                </div>
+                <div class="people-who-like">
+                    <img src="images/profile-img2.jpg" alt="" class="people-who-like__img">
+                    <span class="people-who-like__comment">ainworld님 외 10명이 좋아합니다</span>
+                </div>
+                <li class="comments">
+                    <ul class="comment">
+                        <span class="comment__id">canon_mj</span>
+                        <span class="comment__text">위워크에서 진행한 베이킹 클래스...</span>
+                    </ul>
+                </li>
+                <form class="comment__input">
+                    <input type="text" placeholder=" 댓글 달기..." name="" id="" class="comment__input--text">
+                    <button class="comment__input--button">게시</button>
+                </form>
+            </article>
+        </div>
+        <div class="main-right">
+            <div class="account">
+                <img src="images/profile-img2.jpg" alt="" class="account__img">
+                <div class="account__text">
+                    <p class="account__id">wecode_bootcamp</p>
+                    <div class="account__name">
+                        <p class="account__name--eng">WeCode</p>
+                        <p class="account__name--kor">위코드</p>
+                    </div>
+                </div>
+            </div>
+            <div class="story">
+                <div class="story__header">
+                    <p class="story__header--title">스토리</p>
+                    <button class="story__heaader--button">모두 보기</button>
+                </div>
+                <li class="story__list">
+                    <ul class="story__item">
+                        <img src="images/profile-img2.jpg" alt="" class="story__item--img">
+                        <span class="story__item--text">
+                            <p class="story__item--id">_yum_s</p>
+                            <p class="story__item--time">16분 전</p>
+                        </span>
+                    </ul>
+                    <ul class="story__item">
+                        <img src="images/profile-img2.jpg" alt="" class="story__item--img">
+                        <span class="story__item--text">
+                            <p class="story__item--id">_yum_s</p>
+                            <p class="story__item--time">16분 전</p>
+                        </span>
+                    </ul>
+                </li>
+            </div>
+            <div class="recommend">
+                <div class="recommend__header">
+                    <span class="recommend__header--title">회원님을 위한 추천</span>
+                    <button class="recommend__header--button">모두 보기</button>
+                </div>
+                <li class="recommend__list">
+                    <ul class="recommend__item">
+                        <span>
+                            <img src="images/profile-img2.jpg" alt="" class="recommend__item--img">
+                            <span class="recommend__item--text">
+                                <p class="recommend__item--id">id</p>
+                                <p class="recommend__item--people-who-recommend">~~외 2명이 팔로우</p>
+                            </span>
+                        </span>
+                        <button class="recommend__item--button">팔로우</button>
+                    </ul>
+                </li>
+            </div>
+            <footer class="footer">Westagram 정보, 지원, 홍보 센터, API, 채용정보, 개인정보처리방침, 약관, 디렉터리, 프로필, 해시태그, 언어
+                <br>
+                @2019gr Westagram
+            </footer>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
