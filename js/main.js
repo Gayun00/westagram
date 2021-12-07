@@ -55,6 +55,11 @@ const $searchResultContainer = document.querySelector('.search__result--containe
 
 function searchId(e) {
     const target = e.target;
+    if(target.value.length > 0) {
+        $searchResultContainer.classList.remove('hide');
+    } else {
+        $searchResultContainer.classList.add('hide');
+    }
     const filteredId = idArr.filter((id) => {
         return id[1].includes(target.value);
     })

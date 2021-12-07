@@ -104,6 +104,10 @@ nav {
 
 input::placeholder {color: var(--border-grey)}
 
+.nav__buttons > button > img {
+    cursor: pointer;
+}
+
 main {
     display: flex;
     margin: 4em 0 0 4em;
@@ -361,6 +365,10 @@ main {
 .recommend__list > ul > button {
     font-weight: 700;
     color: rgb(0, 110, 255);
+}
+
+.hide {
+    visibility: hidden;
 }
 
 footer {
