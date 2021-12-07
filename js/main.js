@@ -7,6 +7,7 @@ const $comments = document.querySelector('.comment');
 const $feedButtons = document.querySelector('.feed__button');
 const $deleteButton = document.querySelector('.comment__delete-button');
 const $myButton = document.querySelector('.my');
+const $peopleWhoLike = document.querySelector('.people-who-like__comment');
 
 $commentButton.addEventListener('click', addComment);
 $commentContainer.addEventListener('click', deleteComment);
@@ -15,6 +16,10 @@ $search.addEventListener('keyup', searchId);
 document.addEventListener('click', handleMyMenu);
 
 const idArr = [["images/profile-img2.jpg", 'wecode_bootcamp', 'wecode | 위코드'], ["images/profile-img.jpg", 'i_love_coding', '아코딩'], [null, 'sunglass', null], [null, 'sweat_shirt', null], [null, 'newziland4043', null], [null, 'huggy_woggy__33', null]];
+const peopleWhoLikeArr = ['ace123', 'bbi3', 'case_44', 'catcat_239', '23dd234'];
+const myId = 'canon_mj';
+
+$peopleWhoLike.textContent = `${peopleWhoLikeArr[0]}님 외 ${peopleWhoLikeArr.length - 1}명이 좋아합니다.`
 
 function addComment(e) {
     e.preventDefault();
@@ -51,6 +56,12 @@ function handleLike(e) {
         target.classList.toggle('fas');
         target.classList.toggle('liked');
     }
+    if(target.classList.contains('liked')) {
+        peopleWhoLikeArr.push(myId);
+    } else {
+        peopleWhoLikeArr.pop();
+    }
+    $peopleWhoLike.textContent = `${peopleWhoLikeArr[0]}님 외 ${peopleWhoLikeArr.length - 1}명이 좋아합니다.`
 }
 
 const $searchResultContainer = document.querySelector('.search__result--container');
@@ -90,3 +101,4 @@ function handleMyMenu(e) {
         $myButton.classList.add('hide');
     }
 }
+
