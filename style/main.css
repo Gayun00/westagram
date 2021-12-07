@@ -122,6 +122,14 @@ main {
     justify-content: space-between;
 }
 
+.feed__button > i {
+    cursor: pointer;
+}
+
+.liked {
+    color: rgb(231,48,68)
+}
+
 .people-who-like {
     display: flex;
     align-items: center;
@@ -138,12 +146,16 @@ main {
     list-style: none;
 }
 
-.comments > ul {
+.comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0;
     padding: 0.5em;
 }
 
 .comment__id {
+    margin-right: 6px;
     font-weight: 800;
 }
 
@@ -170,6 +182,10 @@ main {
 
 .comment__input > button:hover {
     color: rgb(55,135,237);
+}
+
+.comment__delete-button {
+    cursor: pointer;
 }
 
 .account {
